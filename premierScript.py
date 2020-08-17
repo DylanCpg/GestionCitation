@@ -52,19 +52,28 @@ def add_citation(quotes,characters):
                 characters.append(user_characters)
         print(quotes)
         return "\najout réussi"
-        
-user_answer = input('Tapez entrée pour découvrir une autre citation, sur A pour ajouter une citation ou B pour quitter le programme.')
 
-while user_answer != 'b' and user_answer != 'B' or user_answer=='A' :
+def suppr_citation(quotes,characters):
+        user_authCitation=input("Donner l'auteur de la citation à supprimer")
+        for i in range(len(characters)):
+                if characters[i]==user_authCitation:
+                        del(characters[i])
+                        del(quotes[i])
+                        return "suppression ok"
+                elif i==len(characters)-1 and characters[i]!=user_authCitation:
+                        print("l'auteur n'existe pas")
+                
+user_answer = input('Tapez entrée pour découvrir une autre citation, sur A pour ajouter une citation, sur S pour supprimer ou B pour quitter le programme.')
+
+while (user_answer != 'b' and user_answer != 'B') or user_answer=='A' or user_answer=='S' :
         if user_answer=='A':
             add_citation(quotes,characters)
-        if(len(quotes)>12):
-                user_answer=input('Tapez entrée pour découvrir une autre citation, sur A pour ajouter une citation ou B pour quitter le programme.')
-        print(get_random_item_in(quotes))
-        if(len(quotes)==12):
-                user_answer = input('Tapez entrée pour découvrir une autre citation, sur A pour ajouter une citation ou B pour quitter le programme.')
-   
-
+        elif user_answer=='S':
+                 suppr_citation(quotes,characters)
+        else:   
+                print(get_random_item_in(quotes))
+               
+        user_answer=input('Tapez entrée pour découvrir une autre citation, sur A pour ajouter une citation, sur S pour supprimer ou B pour quitter le programme.')
     
    
 
