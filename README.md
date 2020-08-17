@@ -1,2 +1,3 @@
 # GestionCitation
-Créer ou afficher des citation 
+Créer ou afficher des citations
+Langage: Python
