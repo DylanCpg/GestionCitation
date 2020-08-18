@@ -1,3 +1,3 @@
 # GestionCitation
 Créer ou afficher des citations
-Langage: Python
+Langage: Python 3.7.2
