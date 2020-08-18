@@ -1,3 +1,3 @@
 # GestionCitation
-Créer ou afficher des citations
+Créer,afficher ou supprimer des citations \n
 Langage: Python 3.7.2
